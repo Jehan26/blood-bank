@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blood Bank Management System</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Blood Bank Management System</h1>
+        <p>Donate blood, save lives</p>
+    </header>
+    <main>
+        <section class="donor-section">
+            <h2>Donors</h2>
+            <form id="donor-form">
+                <input type="text" id="donor-name" placeholder="Name" required />
+                <select id="donor-blood-type" required>
+                    <option value="" disabled selected>Select Blood Type</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <input type="tel" id="donor-phone" placeholder="Phone" />
+                <input type="email" id="donor-email" placeholder="Email" />
+                <button type="submit">Add Donor</button>
+            </form>
+            <ul id="donor-list"></ul>
+        </section>
+        <section class="inventory-section">
+            <h2>Blood Inventory</h2>
+            <form id="inventory-form">
+                <select id="inventory-blood-type" required>
+                    <option value="" disabled selected>Select Blood Type</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <input type="number" id="inventory-quantity" placeholder="Quantity (units)" min="1" required />
+                <button type="submit">Update Inventory</button>
+            </form>
+            <ul id="inventory-list"></ul>
+        </section>
+        <section class="requests-section">
+            <h2>Blood Requests</h2>
+            <form id="request-form">
+                <input type="text" id="request-patient-name" placeholder="Patient Name" required />
+                <select id="request-blood-type" required>
+                    <option value="" disabled selected>Select Blood Type</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <input type="number" id="request-quantity" placeholder="Quantity (units)" min="1" required />
+                <button type="submit">Add Request</button>
+            </form>
+            <ul id="request-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Blood Bank Management System</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: #eee;
+}
+
+h1 {
+    text-align: center;
+    color: #ff6f61;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+section {
+    background: #333;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+    transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.9);
+}
+
+form {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    flex: 1 1 200px;
+    padding: 10px 15px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: #444;
+    color: #eee;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    border-color: #ff6f61;
+    outline: none;
+    background-color: #555;
+}
+
+button {
+    background: linear-gradient(45deg, #ff6f61, #e94e4e);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(233, 78, 78, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #e94e4e, #b73232);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    max-height: 250px;
+    overflow-y: auto;
+    border-top: 1px solid #555;
+    color: #eee;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #555;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.status-pending {
+    color: #fbc02d;
+    font-weight: 600;
+}
+
+.status-approved {
+    color: #4caf50;
+    font-weight: 600;
+}
+
+.status-rejected {
+    color: #e94e4e;
+    font-weight: 600;
+}
+
+.status-buttons button {
+    margin-left: 10px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+}
+
+.status-buttons button:hover {
+    opacity: 0.85;
+}
+
+section h2 {
+    color: #ff6f61;
+    border-bottom: 2px solid #e94e4e;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    button {
+        flex: 1 1 100%;
+    }
+}
